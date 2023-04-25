@@ -1,0 +1,16 @@
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.exe
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.deps.json
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.runtimeconfig.json
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.runtimeconfig.dev.json
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.dll
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\bin\Debug\net5.0\DevOpsDemoConsoleApp.pdb
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.csproj.AssemblyReference.cache
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.AssemblyInfoInputs.cache
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.AssemblyInfo.cs
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.csproj.CoreCompileInputs.cache
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.dll
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\refint\DevOpsDemoConsoleApp.dll
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.pdb
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\DevOpsDemoConsoleApp.genruntimeconfig.cache
+C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleApp\obj\Debug\net5.0\ref\DevOpsDemoConsoleApp.dll

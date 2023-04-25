@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "91602ae6-4c3d-4116-b452-23d67251d251": {
+      "ProjectGuid": "91602ae6-4c3d-4116-b452-23d67251d251",
+      "DisplayName": "DevOpsDemoConsoleApp",
+      "ColorIndex": 0
+    },
+    "fc538786-1c61-4bfd-a479-ff5800192aaa": {
+      "ProjectGuid": "fc538786-1c61-4bfd-a479-ff5800192aaa",
+      "DisplayName": "DevOpsDemoTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
