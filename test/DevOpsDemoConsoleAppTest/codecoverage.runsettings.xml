@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="XPlat Code Coverage">
+				<Configuration>
+					<Format>json,cobertura</Format>
+					<Include>.*(common prefix of all csproj files in the solution).*</Include>
+					<!-- [Assembly-Filter]Type-Filter -->
+					<ExcludeByAttribute>ExcludeFromCodeCoverageAttribute,Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute</ExcludeByAttribute>
+				</Configuration>
+			</DataCollector>
+		</DataCollectors>
+	</DataCollectionRunSettings>
+</RunSettings>
