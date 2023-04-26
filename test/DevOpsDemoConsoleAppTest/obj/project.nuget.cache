@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xSycNrU473SrpiVNrQ5FMTBCWxH1w93zKlc2enLYxKSMlTzQniXGS1/9pQHyAm1+UwjhotvHBWolD/Uxg4ITpA==",
+  "dgSpecHash": "L8Zr0ioS9D5kXkm7roLj5QBo6fGaIgaLU+JWUb60wfCKzexxWLagR4pEmDEwx7jwfwfu1k6U6naMajb9Qxkf/Q==",
   "success": true,
   "projectFilePath": "C:\\work\\vs projects\\DevOpsDemoProject\\test\\DevOpsDemoConsoleAppTest\\DevOpsDemoConsoleAppTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\davidl\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
+    "C:\\Users\\davidl\\.nuget\\packages\\coverlet.msbuild\\3.2.0\\coverlet.msbuild.3.2.0.nupkg.sha512",
     "C:\\Users\\davidl\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
     "C:\\Users\\davidl\\.nuget\\packages\\microsoft.net.test.sdk\\17.5.0\\microsoft.net.test.sdk.17.5.0.nupkg.sha512",
     "C:\\Users\\davidl\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
