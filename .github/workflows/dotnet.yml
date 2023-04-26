@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore src/DevOpsDemoConsoleApp
     - name: Build
-      run: dotnet build --no-restore src/DevOpsDemoConsoleApp
+      run: dotnet build src/DevOpsDemoConsoleApp
     - name: Test
-      run: dotnet test --no-build --verbosity normal test/DevOpsDemoConsoleAppTest
+      run: dotnet test --no-build test/DevOpsDemoConsoleAppTest
