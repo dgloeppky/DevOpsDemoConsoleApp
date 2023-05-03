@@ -20,7 +20,7 @@ namespace DevOpsDemoConsoleAppTest
         {
             var calculator = new Calculator();
 
-            var result = calculator.Multiple(5, 5);
+            var result = calculator.Multiply(5, 5);
 
             Assert.Equal(25, result);
         }

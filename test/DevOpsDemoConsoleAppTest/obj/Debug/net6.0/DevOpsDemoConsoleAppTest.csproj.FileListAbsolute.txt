@@ -104,11 +104,11 @@ C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\
 C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\DevOpsDemoConsoleApp.dll
 C:\work\vs projects\DevOpsDemoProject\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\DevOpsDemoConsoleApp.pdb
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\testhost.dll
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\DevOpsDemoConsoleApp.deps.json
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\DevOpsDemoConsoleApp.runtimeconfig.json
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\DevOpsDemoConsoleApp.exe
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\testhost.exe
-C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\testhost.dll
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\xunit.runner.reporters.netcoreapp10.dll
 C:\work\vs projects\DevOpsDemoProject\test\DevOpsDemoConsoleAppTest\bin\Debug\net6.0\xunit.runner.utility.netcoreapp10.dll
