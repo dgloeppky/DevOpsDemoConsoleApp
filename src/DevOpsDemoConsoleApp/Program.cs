@@ -5,6 +5,7 @@ using System.Xml;
 
 namespace DevOpsDemoConsoleApp
 {
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public class Program
     {
         public static void Main()
@@ -15,7 +16,7 @@ namespace DevOpsDemoConsoleApp
 
             Console.WriteLine(c.Add(5, 5).ToString());
             Console.WriteLine();
-            Console.WriteLine(c.Multiple(5, 5).ToString());
+            Console.WriteLine(c.Multiply(5, 5).ToString());
 
 
 

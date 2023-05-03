@@ -14,7 +14,7 @@ namespace DevOpsDemoConsoleApp
             return a + b;
         }
 
-        public int Multiple(int a, int b)
+        public int Multiply(int a, int b)
         {
             return a * b;
         }
