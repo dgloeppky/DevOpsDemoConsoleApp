@@ -5,6 +5,7 @@ using System.Xml;
 
 namespace DevOpsDemoConsoleApp
 {
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     public class Program
     {
         public static void Main()
