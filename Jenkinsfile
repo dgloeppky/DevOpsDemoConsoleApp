@@ -53,7 +53,8 @@ pipeline {
         //      sh "pwd"
         //    }        
         //  }
-        dir('cd ~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/') {
+        
+        dir('~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/') {
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
           sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
