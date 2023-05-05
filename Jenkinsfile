@@ -1,14 +1,12 @@
 pipeline {
   agent any
-  environment { 
-    sh "EXPORT LOGFILE=log${BUILD_NUMBER}"
-  }
   
   stages {
     
     stage("Init") {
       steps {
         echo "Init stage"
+        sh "EXPORT LOGFILE=log${BUILD_NUMBER}"
         echo "LOGFILE = ${LOGFILE}"
        }
     }
