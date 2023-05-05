@@ -1,3 +1,7 @@
+def buildStatus
+def testStatus
+def deployStatus
+
 pipeline {
   agent any
     environment {
