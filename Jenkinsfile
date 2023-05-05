@@ -28,7 +28,7 @@ pipeline {
   stage("Build") {
       steps {
          echo "Running build stage ${BUILD_ID} on ${JENKINS_URL}, Build URL: ${BUILD_URL}"
-         dir('~/workspace/DevOpsDemoProject/src/DevOpsDemoConsoleApp') {
+         dir('~/workspace/OpsDemoProjectDeclarative_master/src/DevOpsDemoConsoleApp') {
             sh "dotnet sonarscanner begin /k:\"DemoDevOpsProject\" /d:sonar.host.url=\"http://192.168.2.63:9000\" /d:sonar.login=\"squ_d80cd6e7bedb39a725563df35af64205e50c4a1a\""
             //sh "dotnet build ~/workspace/DevOpsDemoProject/src/DevOpsDemoConsoleApp/DevOpsDemoConsoleApp.sln -c:Release"
              script {
@@ -54,8 +54,8 @@ pipeline {
         //    }        
         //  }
         
-        dir('~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/') {
-          sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/"
+        dir('~/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/') {
+          sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ~/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
           sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
         }
