@@ -56,7 +56,7 @@ pipeline {
         
         echo "The job url: ${JOB_URL}"
         
-          sh "cd /var/jenkins_home/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/"
+          sh "cd /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
           sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
