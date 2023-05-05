@@ -4,6 +4,7 @@ def deployStatus
 
 pipeline {
   agent any
+    options { skipDefaultCheckout() }
     environment {
       LOGFILE="log${BUILD_NUMBER}"
       DOTNET_ROOT="/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/.NET_6"
@@ -12,6 +13,12 @@ pipeline {
       SONAR_HOST_URL="http://192.168.2.63:9000"
   }      
   stages {
+    
+     stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
+        }
     
      stage("Init") {
       steps {
