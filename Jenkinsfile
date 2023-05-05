@@ -56,11 +56,11 @@ pipeline {
         
         echo "The job url: ${JOB_URL}"
         
-        dir('~/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/') {
+      
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ~/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
           sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
-        }
+    
       }
     }
 
