@@ -8,7 +8,7 @@ pipeline {
       LOGFILE="log${BUILD_NUMBER}"
       DOTNET_ROOT="/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/.NET_6"
       DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
-      PATH="${env.PATH}:$DOTNET_ROOT:~/.dotnet/tools/"
+      PATH="${env.PATH}:$DOTNET_ROOT:/var/jenkins_home/.dotnet/tools/"
       SONAR_HOST_URL="http://192.168.2.63:9000"
   }      
   stages {
@@ -28,11 +28,11 @@ pipeline {
   stage("Build") {
       steps {
          echo "Running build stage ${BUILD_ID} on ${JENKINS_URL}, Build URL: ${BUILD_URL}"
-         dir('~/workspace/OpsDemoProjectDeclarative_master/src/DevOpsDemoConsoleApp') {
+         dir('/var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/src/DevOpsDemoConsoleApp') {
             sh "dotnet sonarscanner begin /k:\"DemoDevOpsProject\" /d:sonar.host.url=\"http://192.168.2.63:9000\" /d:sonar.login=\"squ_d80cd6e7bedb39a725563df35af64205e50c4a1a\""
             //sh "dotnet build ~/workspace/DevOpsDemoProject/src/DevOpsDemoConsoleApp/DevOpsDemoConsoleApp.sln -c:Release"
              script {
-                    buildStatus = sh(returnStatus: true, script: "dotnet build ~/workspace/DevOpsDemoProject/src/DevOpsDemoConsoleApp/DevOpsDemoConsoleApp.sln -c:Release")
+                    buildStatus = sh(returnStatus: true, script: "dotnet build /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/src/DevOpsDemoConsoleApp/DevOpsDemoConsoleApp.sln -c:Release")
                 }
             sh "dotnet sonarscanner end /d:sonar.login=\"squ_d80cd6e7bedb39a725563df35af64205e50c4a1a\""
          }
@@ -57,9 +57,9 @@ pipeline {
         echo "The job url: ${JOB_URL}"
         
           sh "cd /var/jenkins_home/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/"
-          sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ~/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
-          //sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
-          //sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
+          sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
+          sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
+          sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
     
       }
     }
