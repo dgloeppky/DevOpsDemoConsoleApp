@@ -21,6 +21,8 @@ pipeline {
         echo "DOTNET_SYSTEM_GLOBALIZATION_INVARIANT = ${env.DOTNET_SYSTEM_GLOBALIZATION_INVARIANT}"
         echo "PATH = ${env.PATH}"
         echo "SONAR_HOST_URL = ${env.SONAR_HOST_URL}"
+        
+        echo "${WORKSPACE}"
        }
     }
 
@@ -58,8 +60,13 @@ pipeline {
         
           sh "cd /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/"
-          sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
-          sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
+          script {
+          if (fileExists('/var/jenkins_home/workspace/OpsDemoProjectDeclarative_master/test/DevOpsDemoConsoleAppTest/TestResults/UnitTests.xml')) {
+                echo "Results File found!"
+            }
+          }  
+          //sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
+          //sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
     
       }
     }
