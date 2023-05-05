@@ -9,7 +9,8 @@ pipeline {
       LOGFILE="log${BUILD_NUMBER}"
       DOTNET_ROOT="/var/jenkins_home/tools/io.jenkins.plugins.dotnet.DotNetSDK/.NET_6"
       DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
-      PATH="${env.PATH}:$DOTNET_ROOT:/var/jenkins_home/.dotnet/tools/"
+      PATH="${env.PATH}:$DOTNET_ROOT"
+      PATH="${env.PATH}:~/.dotnet/tools/"
       SONAR_HOST_URL="http://192.168.2.63:9000"
   }      
   stages {
