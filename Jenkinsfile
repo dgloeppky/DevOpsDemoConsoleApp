@@ -61,7 +61,7 @@ pipeline {
         
           // /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master
         
-          sh "cd ${WORKSPACE}/test/DevOpsDemoConsoleAppTest/"
+        dir('${WORKSPACE}/test/DevOpsDemoConsoleAppTest/') {
           sh "pwd"
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ."
           script {
@@ -71,7 +71,7 @@ pipeline {
           }  
         sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
         sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
-
+        }
       }
     }
 
