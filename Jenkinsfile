@@ -62,6 +62,7 @@ pipeline {
           // /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master
         
           sh "cd ${WORKSPACE}/test/DevOpsDemoConsoleAppTest/"
+          sh "pwd"
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ."
           script {
             if (fileExists('./TestResults/UnitTests.xml')) {
