@@ -83,21 +83,16 @@ pipeline {
       steps {
         echo "Logs stage"
         sh "cd ~/jobs/$JOB_NAME/builds/$BUILD_NUMBER"
-//if [ -e log ]
-//then
-//# Send logs to custom API endpoint
+        sh "curl -X GET -u ${BUILD_USER_ID}:Jenkins58k! $BUILD_URL/consoleText -o log$BUILD_NUMBER"
 
-//# get console output of this job
-//curl -X GET -u dgloeppky:Jenkins58k! $BUILD_URL/consoleText -o log$BUILD_NUMBER
 
-//#zip relevant logs
 //cp ~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/TestResults/UnitTests.xml .
 //find ~/workspace/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/TestResults/ -name 'coverage.opencover.xml' -exec cp "{}" .  \;
 //zip Jenkins$BUILD_NUMBER.zip log$BUILD_NUMBER UnitTests.xml coverage.opencover.xml 
 
-//#curl --data-binary @$LOGFILE -s -X POST -H "X-API-Key:KNEH369SKRS64T5W7SUFE5XU8FI0HQV7" https://myappformdev.centennialcollege.ca/CencolCoreLibraryWebApi/api/scm/jenkins/log
+
 //curl -F file1=@Jenkins$BUILD_NUMBER.zip -H "X-API-Key:KNEH369SKRS64T5W7SUFE5XU8FI0HQV7" https://myappformdev.centennialcollege.ca/CencolCoreLibraryWebApi/api/scm/jenkins/log
-//fi        
+
       }
     }
     
