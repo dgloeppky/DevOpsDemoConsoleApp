@@ -65,11 +65,11 @@ pipeline {
         sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ${WORKSPACE}/test/DevOpsDemoConsoleAppTest/"
           script {
             if (fileExists('${WORKSPACE}/test/DevOpsDemoConsoleAppTest/TestResults/UnitTests.xml')) {
-                echo "Results File found!"
+                echo "UnitTests.xml results File found!"
             }
           }  
 
-          // sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
+          sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
           // sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
     
       }
