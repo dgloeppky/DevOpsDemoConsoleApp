@@ -61,7 +61,7 @@ pipeline {
         
           // /var/jenkins_home/workspace/OpsDemoProjectDeclarative_master
         
-        dir('${WORKSPACE}/test/DevOpsDemoConsoleAppTest/') {
+          sh "cd ${WORKSPACE}/test/DevOpsDemoConsoleAppTest/"
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ."
           script {
             if (fileExists('./TestResults/UnitTests.xml')) {
@@ -69,9 +69,9 @@ pipeline {
             }
           }  
 
-          sh "dotnet test --results-directory  TestResults --settings codecoverage.runsettings.xml"
+          sh "dotnet test --results-directory ./TestResults --settings codecoverage.runsettings.xml"
           sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
-        }
+
       }
     }
 
