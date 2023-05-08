@@ -69,9 +69,8 @@ pipeline {
                 echo "UnitTests.xml results File found!"
             }
           }  
-
-          //sh "dotnet test --results-directory ./TestResults --settings codecoverage.runsettings.xml"
-          //sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
+        sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
+        sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
 
       }
     }
