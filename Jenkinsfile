@@ -71,7 +71,7 @@ pipeline {
           }  
         sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
         sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
-        testStatus = 0  
+          script { testStatus = 0 }
         }
       }
     }
