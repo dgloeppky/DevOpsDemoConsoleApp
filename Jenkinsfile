@@ -69,8 +69,8 @@ pipeline {
             }
           }  
 
-          sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
-          // sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
+          sh "dotnet test --results-directory  ${WORKSPACE}/test/DevOpsDemoConsoleAppTest/TestResults --settings codecoverage.runsettings.xml"
+          sh "~/.dotnet/tools/reportgenerator -reports:`find . -name coverage.opencover.xml` -reporttypes:Cobertura -targetdir:coveragereport"
     
       }
     }
