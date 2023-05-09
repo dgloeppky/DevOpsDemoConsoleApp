@@ -85,7 +85,9 @@ pipeline {
         echo "Deployment stage"
        }
     }
-  }
+  
+  } // end stages
+  
   post { 
         always { 
               script {
@@ -100,7 +102,8 @@ pipeline {
                 sh(script: "curl -X GET -u dgloeppky:Jenkins58k! ${BUILD_URL}/consoleText -o log${BUILD_NUMBER}")
                 sh(script: "zip Jenkins${BUILD_NUMBER}.zip log${BUILD_NUMBER} UnitTests.xml coverage.opencover.xml")
                 sh(script: "curl -F file1=@Jenkins${BUILD_NUMBER}.zip -H \"X-API-Key:KNEH369SKRS64T5W7SUFE5XU8FI0HQV7\" https://myappformdev.centennialcollege.ca/CencolCoreLibraryWebApi/api/scm/jenkins/log")
-            }
+              }
+           }
         }
     }
-}
+}  
