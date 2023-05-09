@@ -78,11 +78,12 @@ pipeline {
 
     stage("Logs") {
       when {
-        expression {  return fileExists ("/var/jenkins_home/jobs/$JOB_NAME/branches/$BRANCH_NAME/builds/$BUILD_NUMBER/log")}
+        expression {  return fileExists ("/var/jenkins_home/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log")}
       }
       steps {
         //echo "Logs stage"
-        sh "cd /var/jenkins_home/jobs/$JOB_NAME/branches/$BRANCH_NAME/builds/$BUILD_NUMBER"
+        echo "Job Name = ${JOB_NAME}
+        sh "cd /var/jenkins_home/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}"
         sh "pwd"
         //sh "curl -X GET -u ${BUILD_USER_ID}:Jenkins58k! $BUILD_URL/consoleText -o log$BUILD_NUMBER"
 
@@ -100,6 +101,7 @@ pipeline {
     stage("Deploy") {
       steps {
         echo "Deployment stage"
+        echo "Job Name = ${JOB_NAME}\
        }
     }
   }
