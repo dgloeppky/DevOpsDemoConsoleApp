@@ -86,7 +86,7 @@ pipeline {
                 echo "Logs stage"
                 sh(script: "cd /var/jenkins_home/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}")
                 sh(script: "cp ${WORKSPACE}/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/TestResults/UnitTests.xml .")
-                sh(script: "find ${WORKSPACE}/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/TestResults/ -name 'coverage.opencover.xml' -exec cp \"{}\" .  \;")
+                sh(script: "find ${WORKSPACE}/DevOpsDemoProject/test/DevOpsDemoConsoleAppTest/TestResults/ -name 'coverage.opencover.xml' -exec cp \"{}\" . ")
                 sh(script: "curl -X GET -u ${BUILD_USER_ID}:Jenkins58k! ${BUILD_URL}/consoleText -o log${BUILD_NUMBER}")
             }
           }  
