@@ -66,7 +66,7 @@ pipeline {
           sh "dotnet test --no-build --nologo --logger \"trx;LogFileName=UnitTests.xml\" ."
           script {
             if (fileExists('./TestResults/UnitTests.xml')) {
-                echo "UnitTests.xml results File found!"
+                echo "UnitTests.xml results file found!"
             }
           }  
         sh "dotnet test --results-directory TestResults --settings codecoverage.runsettings.xml"
@@ -77,11 +77,17 @@ pipeline {
     }
 
     stage("Logs") {
-      when {
-        expression {  return fileExists ("/var/jenkins_home/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log")}
-      }
       steps {
-        //echo "Logs stage"
+           script {
+            j = "${JOB_NAME}"
+            echo j
+            j = j.replace("/","_")
+            echo j
+            if (fileExists("/var/jenkins_home/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log")) {
+                echo "Log file found!"
+            }
+          }  
+        echo "Logs stage"
         echo "Job Name = ${JOB_NAME}"
         sh "cd /var/jenkins_home/jobs/${JOB_NAME}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}"
         sh "pwd"
@@ -101,7 +107,6 @@ pipeline {
     stage("Deploy") {
       steps {
         echo "Deployment stage"
-        echo "Job Name = ${JOB_NAME}"
        }
     }
   }
