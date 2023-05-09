@@ -78,11 +78,11 @@ pipeline {
 
     stage("Logs") {
       when {
-        expression {  return fileExists ("/var/jenkins_home/jobs/$JOB_NAME/builds/$BUILD_NUMBER/log")}
+        expression {  return fileExists ("/var/jenkins_home/jobs/$JOB_NAME/branches/$BRANCH_NAME/builds/$BUILD_NUMBER/log")}
       }
       steps {
         echo "Logs stage"
-        sh "cd /var/jenkins_home/jobs/$JOB_NAME/builds/$BUILD_NUMBER"
+        sh "cd /var/jenkins_home/jobs/$JOB_NAME/branches/$BRANCH_NAME/builds/$BUILD_NUMBER"
         sh "curl -X GET -u ${BUILD_USER_ID}:Jenkins58k! $BUILD_URL/consoleText -o log$BUILD_NUMBER"
 
 
