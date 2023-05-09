@@ -80,9 +80,6 @@ pipeline {
 //zip Jenkins$BUILD_NUMBER.zip log$BUILD_NUMBER UnitTests.xml coverage.opencover.xml 
 //curl -F file1=@Jenkins$BUILD_NUMBER.zip -H "X-API-Key:KNEH369SKRS64T5W7SUFE5XU8FI0HQV7" https://myappformdev.centennialcollege.ca/CencolCoreLibraryWebApi/api/scm/jenkins/log
 
-      }
-    }
-    
     stage("Deploy") {
       steps {
         echo "Deployment stage"
