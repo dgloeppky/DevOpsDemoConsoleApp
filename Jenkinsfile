@@ -80,14 +80,12 @@ pipeline {
       steps {
            script {
             j = "${JOB_NAME}"
-            echo j
-             j = j.replace("/${BRANCH_NAME}","")
-            echo j
-             if (fileExists("~/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log")) {
+            j = j.replace("/${BRANCH_NAME}","")
+             if (fileExists("/var/jenkins_home/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}/log")) {
                 echo "Log file found!"
                 echo "Logs stage"
-                sh "cd /var/jenkins_home/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}"
-                sh "pwd"
+                //sh "cd /var/jenkins_home/jobs/${j}/branches/${BRANCH_NAME}/builds/${BUILD_NUMBER}"
+                //sh "pwd"
             }
           }  
         
