@@ -101,7 +101,7 @@ pipeline {
     stage("Deploy") {
       steps {
         echo "Deployment stage"
-        echo "Job Name = ${JOB_NAME}\
+        echo "Job Name = ${JOB_NAME}"
        }
     }
   }
